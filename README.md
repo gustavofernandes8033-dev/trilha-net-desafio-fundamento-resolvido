@@ -1,14 +1,20 @@
-q# DIO - Trilha .NET - Fundamentos
+DIO - Trilha .NET - Fundamentos
 www.dio.me
 
 ## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+Construí a solução com base nos conhecimentos adiquiridos no curso .NET DecolaTech 2024
 
 ## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+Construção de um sistema de um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
 
+**Neste desafio tentei blindar o sitema de forma que não aceite valores inválidos.**
+**Por exemplo, no inicio do programa são requisitados valores numéricos. Caso seja passado valores impossiveis de converter em decimal, o programa simplesmente requisita novamente novos valores até que seja apresentado um valor válido.**
+**O mesmo acontece ao remover veiculos. caso o usuário apresente um valor impossível de converter para o tipo TimeSpan será requisitado novamente.
+**Ao Remover um veículo do estacionamento é necessario passar a quantidade de horas que o mesmo permaneceu ali. Implementei isso pedindo um valor em horas e minutos, por exemplo "2:30", que internamente é convertido para decimal apenas para calcular o valor a ser cobrado. fiz desta forma para que seja mais natural o uso do programa.**
+
+De resto, todas as funcionalidades do programa permaneceram inalteradas.
 ## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
+A classe "Estacionamento" foi construida conforme o diagrama abaixo:
 ![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
 
 A classe contém três variáveis, sendo:
@@ -27,12 +33,5 @@ A classe contém três métodos, sendo:
 
 **ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
 
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
